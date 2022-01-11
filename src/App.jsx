@@ -1,15 +1,18 @@
-import './style.css';
+import "./style.css";
+import { Switch, Route, Redirect } from "react-router-dom";
+import MainComponent from "./components/MainComponent";
+import Projects from "./components/Projects";
 
 function App() {
   return (
     <>
-    <div className="main-container">
-      <p>Email: brunogrockque@hotmail.com</p>
-      <a href="https://github.com/brunogottschalk/"><p>GitHub</p></a>
-      <a href="https://www.linkedin.com/in/bruno-gottschalk-roque-40ba57216/"><p>Linkedin</p></a>
-    </div>
+      <Switch>
+        <Route exact path="/portfolio" component={MainComponent} />
+        <Route exact path="/portfolio/projects" component={Projects} />
+      </Switch>
+      {<Redirect to="/portfolio" />}
     </>
-  )
+  );
 }
 
 export default App;
