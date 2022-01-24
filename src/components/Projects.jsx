@@ -1,10 +1,10 @@
 import React from "react";
-import ProjectCard from "./ProjectCard";
+import FirstProject from "./FirstProject";
 
 function Projects() {
   return (
     <div className="projects-container">
-      <ProjectCard />
+      <FirstProject />
     </div>
   );
 }
